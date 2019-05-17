@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+version: "2"
+services:
+  mysql-db:
+    image: percona
+    environment:
+     - MYSQL_ROOT_PASSWORD=abcd1234
+     - LANG=en_US.UTF-8
+    tmpfs:
+     - /tmp
+    ports:
+     - 3306:3306

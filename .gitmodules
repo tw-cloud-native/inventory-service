@@ -1,0 +1,3 @@
+[submodule "api/inventory"]
+	path = api/inventory
+	url = https://github.com/DDD-China/inventory-service-contracts.git

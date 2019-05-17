@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: inventory-service
+  labels:
+    app: inventory-service
+spec:
+  ports:
+  - port: 9080
+    name: http
+  selector:
+    app: inventory-service
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: inventory-service-v1
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: inventory-service
+        version: v1
+    spec:
+      containers:
+      - name: inventory-service
+        image: 955065381857.dkr.ecr.cn-north-1.amazonaws.com.cn/inventory-service:BUILD_VERSION
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 9080
+      imagePullSecrets:
+        - name: new-secret
