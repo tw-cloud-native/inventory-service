@@ -9,8 +9,6 @@ node{
     }
 
     withEnv([
-        'ECR_HOST=076880417388.dkr.ecr.cn-northwest-1.amazonaws.com.cn',
-        'TEAM=team-a',
         'SERVICE=inventory-service'
     ]){
         stage('Build') {
@@ -18,9 +16,9 @@ node{
         }
 
         stage('Deploy') {
-            withCredentials([file(credentialsId: 'KUBE_CONFIG', variable: 'KUBE_CONFIG')]) {
+            //withCredentials([file(credentialsId: 'KUBE_CONFIG', variable: 'KUBE_CONFIG')]) {
                 sh './deploy.sh'
-            }
+            //}
         }
     }
 
