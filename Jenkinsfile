@@ -1,8 +1,7 @@
 node{
     stage('Checkout') {
         script {
-            def url = scm.userRemoteConfigs[0].url
-            echo url
+            println Hudson.instance.getItem(env.JOB_NAME).definition.scm.userRemoteConfigs[0].url
         }
 
         git url: 'https://github.com/tw-cloud-native/inventory-service.git',
