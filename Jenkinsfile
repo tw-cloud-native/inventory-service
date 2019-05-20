@@ -9,8 +9,8 @@ node{
     }
 
     withEnv([
-        'ECR_HOST=076880417388.dkr.ecr.cn-northwest-1.amazonaws.com.cn'
-        'TEAM=team-a'
+        'ECR_HOST=076880417388.dkr.ecr.cn-northwest-1.amazonaws.com.cn',
+        'TEAM=team-a',
         'SERVICE=inventory-service'
     ]){
         stage('Build') {
