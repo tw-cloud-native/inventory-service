@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -ex
+
 curl http://tools.twu-china.cn/ | sudo sh -
 
 TAG=team-a-inventory-service
