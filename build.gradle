@@ -4,6 +4,9 @@ buildscript {
     }
     repositories {
         maven {
+            url "http://nexus.twu-china.cn/repository/maven-public/"
+        }
+        maven {
             url "https://plugins.gradle.org/m2/"
         }
         mavenCentral()
@@ -40,6 +43,9 @@ docker {
 }
 
 repositories {
+    maven {
+        url "http://nexus.twu-china.cn/repository/maven-public/"
+    }
     mavenCentral()
 }
 

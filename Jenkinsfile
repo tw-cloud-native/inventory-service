@@ -9,12 +9,12 @@ node{
     }
 
     stage('Build') {
-        sh './gradlew build'
+        sh './build.sh'
     }
 
     stage('Deploy') {
-        withCredentials([file(credentialsId: 'KUBE_CONFIG', variable: 'KUBE_CONFIG')]) {
+        // withCredentials([file(credentialsId: 'KUBE_CONFIG', variable: 'KUBE_CONFIG')]) {
             sh './deploy.sh'
-        }
+        //}
     }
 }
