@@ -1,14 +1,10 @@
 buildscript {
     ext {
-        springBootVersion = '2.0.6.RELEASE'
+        springBootVersion = '2.1.5.RELEASE'
     }
     repositories {
-        maven {
-            url "http://nexus.twu-china.cn/repository/maven-public/"
-        }
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
+        maven {url "http://nexus.twu-china.cn/repository/maven-public/"}
+	    maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
         mavenCentral()
     }
     dependencies {
@@ -35,14 +31,13 @@ jar {
 }
 
 repositories {
-    maven {
-        url "http://nexus.twu-china.cn/repository/maven-public/"
-    }
+    maven {url "http://nexus.twu-china.cn/repository/maven-public/"}
+	maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
     mavenCentral()
 }
 
 ext {
-    springCloudVersion = 'Finchley.SR2'
+    springCloudVersion = 'Greenwich.SR1'
 }
 
 dependencies {
