@@ -3,7 +3,7 @@ buildscript {
         springBootVersion = '2.1.5.RELEASE'
     }
     repositories {
-        maven {url "http://nexus.twu-china.cn/repository/maven-public/"}
+        maven {url "http://nexus.cloud.school.thoughtworks.cn/repository/maven-public/"}
 	    maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
         mavenCentral()
     }
