@@ -2,7 +2,7 @@
 
 set -ex
 
-curl http://tools.twu-china.cn/ | sudo sh -
+curl http://tools.cloud.school.thoughtworks.cn/ | sudo sh -
 
 
 TAG=$SERVICE-$BUILD_NUMBER
