@@ -16,6 +16,6 @@ spec:
         image: {{image}}
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 9080
+        - containerPort: 9081
       imagePullSecrets:
         - name: ecr-secret
