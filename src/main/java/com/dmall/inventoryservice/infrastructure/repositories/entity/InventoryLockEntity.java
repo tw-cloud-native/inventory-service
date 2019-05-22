@@ -12,7 +12,7 @@ import javax.persistence.*;
 public class InventoryLockEntity {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
     @Column(name = "product_id")
