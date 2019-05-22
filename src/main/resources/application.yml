@@ -1,6 +1,3 @@
-server:
-  port: 9081
-
 logging:
   level:
     org.springframework.web.servlet.DispatcherServlet: DEBUG
@@ -48,14 +45,3 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8080/eureka/
-
----
-spring:
-  profiles: prod
-  zipkin:
-    base-url: http://zipkin-server:9411/
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://eureka-server:8080/eureka/
