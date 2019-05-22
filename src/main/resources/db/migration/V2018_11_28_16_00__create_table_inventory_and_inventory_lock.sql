@@ -11,3 +11,11 @@ CREATE TABLE `inventory_lock` (
   `quantity` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
+
+INSERT INTO inventory VALUES
+(1, 1, 101),
+(2, 2, 102),
+(3, 3, 103);
+
+INSERT INTO inventory_lock VALUES
+(1, 1, 2);
