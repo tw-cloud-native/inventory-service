@@ -1,7 +1,14 @@
 server:
   port: 9081
 
+logging:
+  level:
+    org.springframework.web.servlet.DispatcherServlet: DEBUG
+
 spring:
+  sleuth:
+    sampler:
+      probability: 1.0
   application:
     name: inventory-service
   datasource:
@@ -17,6 +24,8 @@ spring:
         show_sql: true
         use_sql_comments: true
         format_sql: true
+        id:
+          new_generator_mappings: false
   h2:
     console:
       enabled: true
