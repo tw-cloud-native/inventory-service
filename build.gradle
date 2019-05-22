@@ -56,6 +56,7 @@ dependencies {
     compile('io.springfox:springfox-swagger2:2.9.2')
     compile('io.springfox:springfox-swagger-ui:2.9.2')
     compile('org.modelmapper:modelmapper:1.1.1')
+    compile 'org.springframework.cloud:spring-cloud-starter-zipkin'
     testCompile('org.springframework.cloud:spring-cloud-starter-contract-verifier')
     testCompile('com.tngtech.archunit:archunit:0.9.3')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
