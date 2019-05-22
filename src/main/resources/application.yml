@@ -52,6 +52,8 @@ eureka:
 ---
 spring:
   profiles: prod
+  zipkin:
+    base-url: http://zipkin-server:9411/
 
 eureka:
   client:
