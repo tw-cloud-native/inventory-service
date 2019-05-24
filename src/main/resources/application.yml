@@ -33,6 +33,20 @@ spring:
   flyway:
     locations: "classpath:/db/migration"
 
+  cloud:
+    stream:
+      bindings:
+        inputOrder:
+          destination: order
+          group: default
+          content-type: application/json
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
 springfox:
   documentation:
     swagger:
