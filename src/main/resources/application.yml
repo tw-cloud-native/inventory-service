@@ -53,6 +53,12 @@ springfox:
       v2:
         path: /swagger
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 eureka:
   instance:
     prefer-ip-address: true
