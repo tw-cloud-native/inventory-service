@@ -9,7 +9,8 @@ node{
     }
 
     withEnv([
-        'SERVICE=inventory-service'
+        'SERVICE=inventory-service',
+        'PROFILES=dev'
     ]){
         stage('Build') {
             sh './build.sh'
