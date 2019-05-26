@@ -5,10 +5,13 @@ metadata:
   namespace: {{namespace}}
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: {{service}}
   template:
     metadata:
       labels:
-        k8s-app: {{service}}
+        app: {{service}}
         version: v1
     spec:
       containers:
