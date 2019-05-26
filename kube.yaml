@@ -22,3 +22,31 @@ spec:
           value: {{profiles}}
       imagePullSecrets:
         - name: ecr-secret
+---
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: {{namespace}}
+  name: {{service}}
+spec:
+  selector:
+    k8s-app: {{service}}
+  ports:
+  - port: 9081
+    name: http
+    protocol: TCP
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{service}}
+  namespace: {{namespace}}
+spec:
+  rules:
+  - host: {{service}}.{{team}}.cloud.school.thoughtworks.cn
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: {{service}}
+          servicePort: 9081
