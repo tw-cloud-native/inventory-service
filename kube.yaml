@@ -8,7 +8,7 @@ spec:
   template:
     metadata:
       labels:
-        app: {{service}}
+        k8s-app: {{service}}
         version: v1
     spec:
       containers:
