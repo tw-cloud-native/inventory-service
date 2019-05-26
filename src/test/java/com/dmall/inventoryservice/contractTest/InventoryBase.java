@@ -19,7 +19,7 @@ public class InventoryBase {
         final InventoryService inventoryService = mock(InventoryService.class);
 
         doNothing().when(inventoryService).save(any(Inventory.class));
-        doReturn(1L).when(inventoryService).saveInventoryLock(any(InventoryLock.class));
+        doReturn(1L).when(inventoryService).lock(any(InventoryLock.class));
         doNothing().when(inventoryService).unlock(any(Long.class));
         RestAssuredMockMvc.standaloneSetup(new InventoryController(inventoryService));
     }

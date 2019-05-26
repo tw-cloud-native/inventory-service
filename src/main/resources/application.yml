@@ -40,6 +40,10 @@ spring:
           destination: order
           group: default
           content-type: application/json
+        outputInventory:
+          destination: inventory
+          group: default
+          content-type: application/json
 
   rabbitmq:
     host: localhost

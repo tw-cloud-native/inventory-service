@@ -1,13 +1,15 @@
 package com.dmall.inventoryservice.adapter.events.order;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
-import lombok.Value;
 
 import java.math.BigDecimal;
 
-@Value
+@Data
 @ToString
-public class OrderCreatedEvent {
+@NoArgsConstructor
+public class OrderEvent {
   private String id;
   private long productId;
   private int quantity;

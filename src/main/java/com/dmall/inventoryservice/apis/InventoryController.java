@@ -34,8 +34,9 @@ public class InventoryController {
     @PostMapping("/lock")
     @ResponseStatus(HttpStatus.CREATED)
     public Long lockInventory(@RequestBody InventoryLockRequest lockRequest) {
-        InventoryLock inventoryLock = InventoryFactory.toLockDomain(lockRequest.getProductId(), lockRequest.getQuantity());
-        return inventoryService.saveInventoryLock(inventoryLock);
+        InventoryLock inventoryLock = InventoryFactory.toLockDomain(lockRequest.getProductId(), lockRequest
+                .getQuantity());
+        return inventoryService.lock(inventoryLock);
     }
 
     @ApiOperation(value = "扣除库存")
