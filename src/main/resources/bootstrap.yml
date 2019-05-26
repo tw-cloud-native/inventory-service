@@ -8,3 +8,7 @@ spring:
     config:
       fail-fast: true
       enabled: false
+    bus:
+      enabled: true
+      trace:
+       enabled: true
