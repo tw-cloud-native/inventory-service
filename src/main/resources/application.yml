@@ -1,13 +1,10 @@
-logging:
-  level:
-    org.springframework.web.servlet.DispatcherServlet: DEBUG
+server:
+  port: 9081
 
 spring:
-  sleuth:
-    sampler:
-      probability: 1.0
   application:
     name: inventory-service
+
   datasource:
     url: jdbc:h2:mem:dmall_inventory_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;INIT=CREATE SCHEMA IF NOT EXISTS dmall_inventory_db
     platform: h2
@@ -33,39 +30,8 @@ spring:
   flyway:
     locations: "classpath:/db/migration"
 
-  cloud:
-    stream:
-      bindings:
-        inputOrder:
-          destination: order
-          group: default
-          content-type: application/json
-        outputInventory:
-          destination: inventory
-          group: default
-          content-type: application/json
-
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
-
 springfox:
   documentation:
     swagger:
       v2:
         path: /swagger
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: http://localhost:8080/eureka/
