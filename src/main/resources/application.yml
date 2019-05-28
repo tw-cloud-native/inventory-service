@@ -35,3 +35,5 @@ springfox:
     swagger:
       v2:
         path: /swagger
+
+#TODO: add eureka config
