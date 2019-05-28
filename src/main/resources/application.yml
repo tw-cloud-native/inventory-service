@@ -30,6 +30,17 @@ spring:
   flyway:
     locations: "classpath:/db/migration"
 
+  sleuth:
+    sampler:
+      probability: 1.0
+
+  zipkin:
+    base-url: http://zipkin.team-a.cloud.school.thoughtworks.cn
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+
 springfox:
   documentation:
     swagger:
