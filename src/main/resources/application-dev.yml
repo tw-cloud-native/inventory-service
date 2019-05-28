@@ -1,1 +1,4 @@
-#TODO: add eureka config for dev env
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8080/eureka/
