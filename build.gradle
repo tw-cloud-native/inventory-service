@@ -45,6 +45,8 @@ ext {
 }
 
 dependencies {
+    //Add actuator starter
+
     implementation 'org.springframework.cloud:spring-cloud-starter-bus-amqp'
 
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
