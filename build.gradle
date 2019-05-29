@@ -45,7 +45,7 @@ ext {
 }
 
 dependencies {
-    //TODO: add spring cloud bus
+    implementation 'org.springframework.cloud:spring-cloud-starter-bus-amqp'
 
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
 

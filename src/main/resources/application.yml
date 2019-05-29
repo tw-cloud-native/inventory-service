@@ -30,7 +30,12 @@ spring:
 
   zipkin:
     base-url: http://zipkin.team-a.cloud.school.thoughtworks.cn
-  #TODO: add rabbitmq config
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 logging:
   level:

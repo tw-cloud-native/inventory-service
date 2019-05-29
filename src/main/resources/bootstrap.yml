@@ -11,8 +11,10 @@ spring:
         serviceId: config-server
       fail-fast: true
       enabled: true
-    # TODO: enable spring cloud bus
-
+    bus:
+      enabled: true
+      trace:
+       enabled: true
 eureka:
   instance:
     prefer-ip-address: true

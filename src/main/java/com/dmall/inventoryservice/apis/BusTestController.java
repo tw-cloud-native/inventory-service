@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/test")
-//TODO: enable refresh this scope
+@RefreshScope
 public class BusTestController {
 
     @Value("${foo:null}")
