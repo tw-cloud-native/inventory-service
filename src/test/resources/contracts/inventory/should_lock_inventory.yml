@@ -1,0 +1,26 @@
+request:
+  method: POST
+  url: /inventories/lock
+  headers:
+    Content-Type: application/json;charset=UTF-8
+  body: |
+    {
+      "productId": 11,
+      "quantity": 10
+    }
+  matchers:
+    body:
+    - path: $.productId
+      type: by_regex
+      value: "[0-9]+"
+    - path: $.quantity
+      type: by_regex
+      value: "[0-9]+"
+response:
+  status: 201
+  body:
+    0
+  matchers:
+    body:
+    - type: by_regex
+      value: "[0-9]+"
