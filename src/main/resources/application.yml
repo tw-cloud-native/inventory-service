@@ -47,4 +47,8 @@ springfox:
       v2:
         path: /swagger
 
-#TODO: config actuator endpoints to expose
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
