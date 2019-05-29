@@ -45,7 +45,7 @@ ext {
 }
 
 dependencies {
-    //TODO: add stream starter
+    implementation 'org.springframework.cloud:spring-cloud-starter-stream-rabbit'
 
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
 

@@ -37,7 +37,13 @@ spring:
     username: guest
     password: guest
 
-  #TODO: config stream bindings
+  cloud:
+    stream:
+      bindings:
+        inputOrder:
+          destination: order
+          group: default
+          content-type: application/json
 
 logging:
   level:

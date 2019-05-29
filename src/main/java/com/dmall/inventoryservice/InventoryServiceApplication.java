@@ -8,7 +8,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-//TODO: enable stream bindings
+@EnableBinding(EventStreams.class)
 public class InventoryServiceApplication {
 
 	public static void main(String[] args) {

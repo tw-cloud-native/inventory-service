@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class EventHandler {
 
-  //TODO: listen order event
+  @StreamListener(EventStreams.INPUT_ORDER)
   public void receive(OrderEvent event) {
     log.info("=======received：" + event.toString());
   }

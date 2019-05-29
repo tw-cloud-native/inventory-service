@@ -7,7 +7,7 @@ public interface EventStreams {
 
     String INPUT_ORDER = "inputOrder";
 
-    //TODO: binding
+    @Input(INPUT_ORDER)
     SubscribableChannel inputOrder();
 
 }
