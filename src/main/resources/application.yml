@@ -37,6 +37,8 @@ spring:
     username: guest
     password: guest
 
+  #TODO: config stream bindings
+
 logging:
   level:
     org.springframework.web: DEBUG
