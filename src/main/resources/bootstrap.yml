@@ -4,7 +4,13 @@ server:
 spring:
   application:
     name: inventory-service
-  #TODO: add configs for config server
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: config-server
+      fail-fast: true
+      enabled: true
 
 eureka:
   instance:

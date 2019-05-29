@@ -45,7 +45,7 @@ ext {
 }
 
 dependencies {
-    //TODO: add config starter
+    implementation 'org.springframework.cloud:spring-cloud-starter-config'
 
     implementation 'org.springframework.cloud:spring-cloud-starter-zipkin'
 
