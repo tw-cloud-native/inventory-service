@@ -45,6 +45,8 @@ ext {
 }
 
 dependencies {
+    //TODO: add config starter
+
     implementation 'org.springframework.cloud:spring-cloud-starter-zipkin'
 
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
