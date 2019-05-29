@@ -11,6 +11,7 @@ spring:
         serviceId: config-server
       fail-fast: true
       enabled: true
+    # TODO: enable spring cloud bus
 
 eureka:
   instance:

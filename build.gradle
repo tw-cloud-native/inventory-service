@@ -45,6 +45,8 @@ ext {
 }
 
 dependencies {
+    //TODO: add spring cloud bus
+
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
 
     implementation 'org.springframework.cloud:spring-cloud-starter-zipkin'
