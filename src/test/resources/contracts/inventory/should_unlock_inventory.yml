@@ -1,0 +1,8 @@
+request:
+  method: PUT
+  urlPath: /inventories/lock/1
+  matchers:
+    url:
+      regex: /inventories/lock/([0-9]+)
+response:
+  status: 200
